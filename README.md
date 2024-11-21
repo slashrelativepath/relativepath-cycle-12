@@ -10,6 +10,9 @@ on linux run:
 
 `$SHELL setup-local-linux.sh`
 
+On Mac (Darwin) run:
+
+`$SHELL setup-local-darwin.sh`
 
 ## Project
 description of project here
