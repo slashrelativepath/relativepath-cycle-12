@@ -8,4 +8,10 @@ else
 fi
 
 # git should be installed
-
+if (git --version)
+then
+  echo 'git is already installed'
+else
+  echo 'installing git'
+  sudo apt install -y git
+fi
