@@ -6,6 +6,13 @@ Repository for relative path cycle 12 sessions.
 
 automation to setup developers with basic tools like text editor and source control across different OS and architecture.
 
+The tools we need for local development are:
+
+* nano for text editor
+* git for source control
+
+These tools will be installed automatically by running the following scripts based on your Operating System.
+
 on linux run:
 
 `$SHELL setup-local-linux.sh`
