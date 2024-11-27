@@ -21,6 +21,10 @@ On Mac (Darwin) run:
 
 `$SHELL setup-local-darwin.sh`
 
+On Windows run:
+
+`powershell -executionpolicy bypass -File .\setup-local-windows.ps1`
+
 ## Project
 description of project here
 
