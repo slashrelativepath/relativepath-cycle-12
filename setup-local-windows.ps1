@@ -12,6 +12,13 @@ if (get-command nano) {
   choco install -y nano
 }
 
+if (get-command git) {
+  echo 'git is already installed.'
+} else }
+  echo 'installing git...'
+  choco install -y git
+}
+
 if (multipass --version) {
   echo 'multipass is already installed.'
 } else {
