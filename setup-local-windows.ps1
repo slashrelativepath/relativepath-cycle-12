@@ -14,7 +14,7 @@ if (get-command nano) {
 
 if (get-command git) {
   echo 'git is already installed.'
-} else }
+} else {
   echo 'installing git...'
   choco install -y git
 }
