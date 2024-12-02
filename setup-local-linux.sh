@@ -16,12 +16,21 @@ else
   sudo apt install -y git
 fi
 
+# snap should be installed
+if (which snap)
+then
+  echo 'snap is already installed'
+else
+  echo 'installing snap'
+  sudo apt install -y snapd
+  echo 'snap has been installed'
+fi
+
 # multipass should be installed
 if (multipass version)
-then 
+then
   echo 'multipass already installed'
-else 
+else
   echo 'installing multipass'
   sudo snap install multipass
 fi
-
