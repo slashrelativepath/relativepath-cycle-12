@@ -26,6 +26,15 @@ On Windows run:
 `powershell -executionpolicy bypass -File .\setup-local-windows.ps1`
 
 ## Project
-description of project here
+Build and deploy a production level webserver.
+
+Requirements:
+* virtual-machine in multipass
+* ubuntu 24.04 or later
+* nginx webserver
+
+Acceptance criteria:
+
+`curl http://webserver?`
 
 
