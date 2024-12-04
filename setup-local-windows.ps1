@@ -16,14 +16,21 @@ if (get-command git) {
   echo 'git is already installed.'
 } else {
   echo 'installing git...'
-  choco install -y git
+  choco install git.install -y --force --params "'GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
 }
 
-if (multipass --version) {
+if (get-command virtualbox) {
+  echo 'virtualbox is already installed.'
+} else {
+  echo 'installing virtualbox...'
+  choco install -y virtualbox
+}
+
+if (get-command multipass) {
   echo 'multipass is already installed.'
 } else {
   echo 'installing multipass...'
-  choco install -y multipass
+  choco install -y multipass --params="'/HyperVisor:VirtualBox'"
 }
 
 
