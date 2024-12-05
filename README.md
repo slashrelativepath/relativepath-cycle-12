@@ -37,4 +37,22 @@ Acceptance criteria:
 
 `curl http://webserver?`
 
+### Usage 
+
+Create webserver vm on Mac & Linux run:
+
+`$SHELL create-vm.sh`
+
+Create webserver vm on Windows Powershell:
+
+`./create-vm.ps1`
+
+Delete webserver vm on Mac and Linux:
+
+`$SHELL destroy-vm.sh`
+
+Delete webserver vm on Windows:
+
+`./destroy-vm.ps1`
+
 
