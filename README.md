@@ -26,6 +26,33 @@ On Windows run:
 `powershell -executionpolicy bypass -File .\setup-local-windows.ps1`
 
 ## Project
-description of project here
+Build and deploy a production level webserver.
+
+Requirements:
+* virtual-machine in multipass
+* ubuntu 24.04 or later
+* nginx webserver
+
+Acceptance criteria:
+
+`curl http://webserver?`
+
+### Usage 
+
+Create webserver vm on Mac & Linux run:
+
+`$SHELL create-vm.sh`
+
+Create webserver vm on Windows Powershell:
+
+`./create-vm.ps1`
+
+Delete webserver vm on Mac and Linux:
+
+`$SHELL destroy-vm.sh`
+
+Delete webserver vm on Windows:
+
+`./destroy-vm.ps1`
 
 
