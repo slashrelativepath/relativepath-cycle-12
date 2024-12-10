@@ -21,9 +21,13 @@ On Mac (Darwin) run:
 
 `$SHELL setup-local-darwin.sh`
 
-On Windows run:
+On Windows in as an administrator run:
 
 `powershell -executionpolicy bypass -File .\setup-local-windows.ps1`
+
+After running the setup script on windows either close the powershell window and reopen or run:
+
+`Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1; refreshenv`
 
 ## Project
 Build and deploy a production level webserver.
