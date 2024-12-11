@@ -29,6 +29,10 @@ After running the setup script on windows either close the powershell window and
 
 `Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1; refreshenv`
 
+If you don't have git and want to run the onboarding script for windows, run:
+
+`Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/slashrelativepath/relativepath-cycle-12/refs/heads/main/setup-local-windows.ps1'))`
+
 ## Project
 Build and deploy a production level webserver.
 
