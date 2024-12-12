@@ -1,12 +1,18 @@
 # There should be an ssh key pair
 if (test-path ./id_ed25519) {
-  echo 'ssh keypair already exists...'
+  echo "SSH keypair already exists."
 } else {
-  echo "Generating keys.."
-  ssh-keygen -t ed25519 -f './id_ed25519' -N `"`"
+  echo "Generating SSH keys..."
+  ssh-keygen -t ed25519 -f './id_ed25519' -N '""'
 }
 
 # There should be a cloud init file
+if (test-path ./cloud-init.yaml) {
+  echo "Cloud init already exists."
+} else {
+  echo "Creating cloud init..."
+  # You'll need to create the cloud init file here.
+}
 
 # There should be a VM called webserver
 if (multipass info webserver) {
