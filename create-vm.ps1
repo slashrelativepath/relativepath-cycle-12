@@ -11,7 +11,15 @@ if (test-path ./cloud-init.yaml) {
   echo "Cloud init already exists."
 } else {
   echo "Creating cloud init..."
-  # You'll need to create the cloud init file here.
+      @"
+#cloud-config
+users:
+  - name: relativepath
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - $(Get-Content -Path "id_ed25519.pub" -Raw)
+"@ | Out-File -FilePath "cloud-init.yaml" -Encoding utf8
 }
 
 # There should be a VM called webserver
