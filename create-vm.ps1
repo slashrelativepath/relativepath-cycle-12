@@ -29,3 +29,7 @@ if (multipass info webserver) {
   echo "Creating webserver VM..."
   multipass launch --name webserver --cloud-init ./cloud-init.yaml --bridged
 }
+
+# Nginx should be installed on the VM
+
+Start-Process -FilePath "ssh" -ArgumentList "-i", "id_ed25519", "-o", "StrictHostKeyChecking=no", "relativepath@$(multipass info webserver | Select-String -Pattern 'IPv4' | ForEach-Object { $_.Line.Split(':')[1].Trim() })", "`"if command -v nginx >& /dev/null; then echo 'nginx is already installed'; else echo 'installing nginx...'; sudo apt install -y nginx; fi`"" -NoNewWindow -Wait
