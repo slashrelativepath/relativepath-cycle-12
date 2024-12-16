@@ -45,6 +45,10 @@ Acceptance criteria:
 
 `curl http://webserver?`
 
+On Windows:
+
+`curl $(multipass info webserver | Select-String -Pattern 'IPv4' | ForEach-Object { $_.Line.Split(':')[1].Trim() })`
+
 ### Usage 
 
 Create webserver vm on Mac & Linux run:
