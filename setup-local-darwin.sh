@@ -26,3 +26,13 @@ else
   echo 'installing multipass'
   brew install multipass
 fi
+
+# shellcheck should be installed
+if (shellcheck --version) 
+then
+  echo "Shellcheck is already installed"
+else
+  echo "installing Shellcheck"
+  brew install shellcheck
+fi
+
