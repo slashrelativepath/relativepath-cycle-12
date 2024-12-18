@@ -34,3 +34,13 @@ else
   echo 'installing multipass'
   sudo snap install multipass
 fi
+
+# shellcheck should be installed
+if (shellcheck --version)
+then
+   echo 'shellcheck already installed'
+else
+  echo 'installing shellcheck'
+  sudo apt install -y shellcheck
+fi
+
