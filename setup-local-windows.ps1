@@ -38,4 +38,10 @@ if (get-command multipass) {
   Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1; refreshenv
 }
 
-
+#shellcheck should be installed
+if(get-command shellcheck) {
+  echo 'shellcheck already installed.'
+} else {
+  echo 'installing shellcheck...'
+  choco install -y shellcheck
+}
