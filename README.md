@@ -55,7 +55,15 @@ Create webserver vm on Mac & Linux run:
 
 `$SHELL create-vm.sh`
 
-Create webserver vm on Windows Powershell:
+SSH to webserver VM:
+`ssh -o StrictHostKeyChecking=no -i id_ed25519 relativepath@$(multipass info webserver | grep IPv4 | awk '{print $2}')`
+
+Scp webserver.sh and ssh to webserver:
+` scp -o StrictHostKeyChecking=no -i id_ed25519 webserver.sh relativepath@$(multipass info webserver | grep IPv4 | 
+awk '{print $2}'): && ssh -o StrictHostKeyChecking=no -i id_ed25519 relativepath@$(multipass info webserver | grep 
+IPv4 | awk '{print $2}')`
+
+ Create webserver vm on Windows Powershell:
 
 `./create-vm.ps1`
 
